@@ -1,0 +1,448 @@
+:root {
+    --primary-bg: #CCCCCC;
+    --transition-timer: .5s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    margin: 0%;
+    padding: 0;
+    list-style: none;
+}
+.row{
+    margin: 0 -15px;
+}
+.fix{
+    overflow: hidden;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.section-title {
+	text-align: center;
+	margin-bottom: 80px;
+}
+.black-bg{background-color: #222222;}
+.pt-70{padding-top: 70px;}
+.pb-70{padding-bottom: 70px;}
+.col-3{width: 25%; float: left; padding: 0 15px;}
+.col-4{width: 33.33%; float: left; padding: 0px 15px;}
+.col-8{width: 66.66%; float: left; padding: 0px 15px;}
+.col-12{width: 100%; float: left; padding: 0 15px;}
+/* header-area start */
+.header-area {
+    border-top: 5px solid #4272D7;
+    min-height: 120px;
+}
+.container, .bg-text{
+    width: 1170px;
+    margin: auto;
+}
+.logo{
+    float: left;
+    margin-top: 40px;
+}
+.search-icon{
+    float: right;
+    margin-top: 50px;
+    margin-left: 25px;
+    position: relative;
+    padding-left: 25px;
+}
+.search-icon::before {
+    position: absolute;
+    background-color: var(--primary-bg, #222222);
+    height: 15px;
+    width: 2px;
+    content: "";
+    top: 3px;
+    left: 0;
+}
+.main-menu{
+    float: right;
+}
+.main-menu ul li{
+    display: inline-block;
+    margin: 25px;
+    position: relative;
+}
+.main-menu ul li a{
+    display: block;
+    color: #666666;
+    padding: 25px 0;
+    font-size: 15px;
+    text-decoration: none;
+}
+.main-menu ul li:hover > a{
+    color: #4272D7;
+}
+/* dropdown menu start*/
+a{
+    transition: var(--transition-timer);
+}
+.main-menu ul li ul.sub-menu{
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    background-color: #171a21;
+    border-top: 5px solid #4272D7;
+    width: 260px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 99;
+}
+.main-menu ul li:hover ul.sub-menu{
+    opacity: 1;
+    visibility: visible;
+    top: 135%
+}
+.main-menu ul li ul.sub-menu li {
+    margin: 0;
+    display: block;
+    border-bottom: 2px solid #1e2128;
+}
+.main-menu ul li ul.sub-menu li a {
+    color: white;
+    font-size: 13px;
+    padding: 15px 20px;
+}
+.main-menu ul li ul.sub-menu li:hover > a{
+    background-color: #4272D7;
+    padding-left: 30px;
+}
+.main-menu ul li ul.sub-menu li ul.sub-menu{
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.main-menu ul li ul.sub-menu li:hover ul.sub-menu{
+    opacity: 1;
+    visibility: visible;
+}
+/* dropdown menu end */
+/* header-area end */
+/* slide area start */
+.single-slide {
+	padding: 180px 0px;
+	text-align: center;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.single-slide h4{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10x;
+}
+.single-slide h2{
+    color: white;
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;   
+}
+.single-slide a {
+	background: #AAAB9E;
+	text-decoration: none;
+	border: 2px solid #0C233A;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px black;
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 20px 41px;
+	display: inline-block;
+}
+.single-slide a:hover{
+    background-color: #4272D7;
+}
+.slider-area{
+    overflow: hidden;
+    width: 100%;
+}
+.slider-area .owl-carousel .owl-nav button.owl-prev:hover,
+.slider-area .owl-carousel .owl-nav button.owl-next:hover{
+    background-color: #4272D7;
+    transition: .3s;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.slider-area .owl-carousel .owl-nav button.owl-prev{
+	background: #AAAB9E;
+    color: white;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	z-index: 9;
+	text-align: center;
+	line-height: 40px;
+}
+.slider-area .owl-carousel .owl-nav button.owl-next{
+    background: #AAAB9E;
+    color: white;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+    left: auto;
+    right: 30px;
+	z-index: 9;
+	text-align: center;
+	line-height: 40px;
+}
+.slider-area .owl-dots {
+	text-align: center;
+	z-index: 1;
+	position: absolute;
+	bottom: 40px;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.slider-area .owl-carousel .owl-dots .owl-dot.active{
+    background-color: #4272D7;
+}
+.slider-area .owl-carousel .owl-dots .owl-dot{
+    background-color: white;
+	height: 13px;
+	width: 13px;
+    margin: 0px 2px;
+	display: inline-block;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+/* slide area end */
+/* cta area start*/
+.cta-area {
+	padding: 25px 0;
+	background: #4272D7;
+}
+.cta-text p {
+	font-size: 18px;
+	color: white;
+	font-weight: 700;
+	margin-top: 9px;
+}
+.cta-text p span{
+    font-size: 30px;
+}
+.cta-button {
+	text-align: right;
+}
+.cta-button a {
+	border: 2px solid #fff;
+	padding: 17px 45px;
+	display: inline-block;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+.cta-button a:hover {
+	background: #8496B3;
+}
+/* cta area end */
+/* service area start*/
+.service-area {
+	padding: 70px 0;
+}
+.single-features{
+    overflow: hidden;
+    position: relative;
+}
+.single-features:hover .features-content{
+    transform: translateY(0);
+}
+.features-img{
+    max-height: 300px;
+}
+.features-img img{
+    width: 100%;
+}
+.features-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #507BD6;
+	height: 100%;
+    padding: 30px;
+    transition: all 0.4s ease 0s;
+    transform: translateY(70.66%);
+    opacity: 0.9;
+}
+.features-icon{
+    margin-bottom: 30px;
+}
+.features-icon i {
+	color: white;
+	font-size: 30px;
+	display: inline-block;
+}
+.features-icon h3 {
+	display: inline-block;
+	padding-left: 15px;
+	color: #fff;
+	overflow: hidden;
+}
+.features-content p {
+	font-size: 15px;
+	color: #E6E6E6;
+	line-height: 25px;
+    
+}
+.features-content a {
+	color: #fff;
+	margin-top: 20px;
+	display: inline-block;
+	text-decoration: none;
+}
+/* service area end*/
+/* bemax service area start */
+.single-services {
+	display: flex;
+    margin-bottom: 50px;
+}
+.section-title > h2::before{
+    position: absolute;
+    background-color: #ADADAD;
+    height: 2px;
+    width: 40px;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+.section-title h2{
+    font-size: 25px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    position: relative;
+    color: #383838;
+    display: inline-block;
+}
+.section-title, .white-text > h2{
+    color: #fff;
+}
+.section-title .white-text > h2::before{
+    background-color: #2222;
+}
+.bemax-service.fix {
+	background: #F0F0F0;
+	padding: 70px 20px;
+    /* padding-bottom: 20px; */
+}
+.bemax-services-icon i {
+	height: 50px;
+	width: 50px;
+	background: #4272D7;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+    font-size: 25px;
+}
+.bemax-services-icon i:hover{
+    background-color: white;
+    color: #4272D7;
+}
+.bemax-services-icon i{
+    transition: all .5s;
+}
+.bemax-services-content {
+	padding-left: 15px;
+}
+.bemax-services-content p {
+	font-size: 15px;
+	color: #666666;
+	line-height: 25px;
+}
+.bemax-services-content h3 {
+	font-weight: 700;
+	color: #555555;
+	margin-bottom: 15px;
+}
+/*bemax service area end */
+/* projet area start */
+.project-wrapper{
+    position: relative;
+}
+.project-thumb{
+    position: relative;
+}
+.project-thumb::before{
+    background: #507BD6;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: all 0.3s;
+    width: 100%;
+    opacity: 0;
+}
+.project-wrapper:hover .project-thumb::before{
+    opacity: .8;
+}
+.project-thumb img{
+    width: 100%;
+}
+.project-content {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0%;
+	text-align: center;
+	left: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+.project-wrapper:hover .project-content{
+    opacity: 1;
+    visibility: visible;
+}
+.project-content a {
+	color: #BBC1CE;
+	font-weight: 700;
+	text-decoration: none;
+	margin-bottom: 15px;
+	display: inline-block;
+    font-size: 15px;
+}
+.project-content a:hover{
+    color: #fff;
+    transition: all .5s;
+}
+.project-content span:hover{
+    color: #fff;
+    transition: all .5s;
+}
+.project-content span{
+    color: #BBC1CE;
+    font-size: 13px;
+    font-weight: 400;
+}
+.section-title .white-text > h2{
+    color: #ffff;
+}
+/* project area end */
+/* footer area start */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: rgba(0, 0, 255, 0.479);
+}
+footer .copyright p{
+    color: wheat;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* footer area end */
